@@ -64,10 +64,18 @@ $(document).ready(function(){
 
   }
 
-  $("submitButton").on('click', orderSubmit);
+  $("#submitButton").on('click', orderSubmit);
 
   function orderSubmit (){
-    
+    if(totalTemp === 0){
+      Materialize.toast('No Order Placed', 4000);
+    }else if($("#address").val().length < 4 ){
+      Materialize.toast('No Address', 4000);
+    }else if ($("#icon_telephone").val().length < 10){
+      Materialize.toast('Incorrect Phone Number', 4000);
+    }else if($("#icon_prefix").val().length < 2){
+      Materialize.toast('Name Not Entered', 4000);
+    }
   }
 
 
