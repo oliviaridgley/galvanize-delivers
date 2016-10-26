@@ -51,10 +51,10 @@ More specifically, the page should allow a user to do the following.
 
 x 1. Click links to both the landing and ordering pages that are left and right aligned respectively in a fixed navbar.
 x 1. See that the ordering page is the active item in the navbar.
-1. See the menu on the left side of _roughly_ half the page in a two-column card layout.
-1. See the order on the right side of _roughly_ half the page with a receipt table at the top and a delivery form below.
-1. Read the service's name and tagline as well as click links to both pages in a two-column footer.
-1. Read the copyright information in the footer.
+x 1. See the menu on the left side of _roughly_ half the page in a two-column card layout.
+x 1. See the order on the right side of _roughly_ half the page with a receipt table at the top and a delivery form below.
+x 1. Read the service's name and tagline as well as click links to both pages in a two-column footer.
+x 1. Read the copyright information in the footer.
 
 Using custom JavaScript, the page should also allow a user to do the following.
 
