@@ -2,7 +2,13 @@
 
 $(document).ready(function(){
 
-//=========================on click for order cards ======================//
+  var subTotalTemp = 0;
+  var taxTemp = 0;
+  var totalTemp = 0;
+  var taxRate = 0.1;
+
+
+//===================on click for order cards =====================//
 
   $(".button-collapse").sideNav();
 
@@ -10,6 +16,13 @@ $(document).ready(function(){
 
   function burgerFunction (){
     $("#table").append("<tr><td>Royale with Cheese</td><td></td><td>$8.99</td></tr>");
+    subTotalTemp += (8.99);
+    $("#subtotal").html(subTotalTemp.toFixed(2));
+    taxTemp = taxRate * subTotalTemp;
+    $("#tax").html(taxTemp.toFixed(2));
+    totalTemp = taxTemp + subTotalTemp;
+    $("#total").html(totalTemp.toFixed(2));
+
   }
 
   $("#iceCreamButton").on('click', iceCreamFunction);
@@ -30,7 +43,13 @@ $(document).ready(function(){
     $("#table").append("<tr><td>Smoked Swine</td><td></td><td>$14.99</td></tr>");
   }
 
-  //===================== Math for Totaling =====================//
+
+
+
+
+
+
+
 
 
 });
