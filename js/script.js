@@ -2,13 +2,15 @@
 
 $(document).ready(function(){
 
+//================== Variable Decloration for Order Math ==============//
+
   var subTotalTemp = 0;
   var taxTemp = 0;
   var totalTemp = 0;
   var taxRate = 0.1;
 
 
-//===================on click for order cards =====================//
+//============== On Click for Order Cards + Order Receipt =================//
 
   $(".button-collapse").sideNav();
 
@@ -64,6 +66,8 @@ $(document).ready(function(){
 
   }
 
+//=======Submit Button + Form and Order Checking (Return Toast) ==========//
+
   $("#submitButton").on('click', orderSubmit);
 
   function orderSubmit (){
@@ -75,11 +79,10 @@ $(document).ready(function(){
       Materialize.toast('Incorrect Phone Number', 4000);
     }else if($("#icon_prefix").val().length < 2){
       Materialize.toast('Name Not Entered', 4000);
+    } else {
+      Materialize.toast('Thank You For Your Order!', 4000);
     }
   }
-
-
-
 
 
 
